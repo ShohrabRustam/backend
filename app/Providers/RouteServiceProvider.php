@@ -20,7 +20,7 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/home';
 
     /**
-     * Define your route model bindings, pattern filters, etc.
+     * Define your route model bindings, pattern filters, etc.,
      *
      * @return void
      */
@@ -28,9 +28,9 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->configureRateLimiting();
 
-        $this->routes(function () {
+        $this->routes(function ()
+        {
             Route::middleware('api')
-                ->prefix('api')
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('web')
